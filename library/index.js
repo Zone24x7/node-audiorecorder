@@ -3,6 +3,7 @@ const processSpawn = require(`child_process`).spawn;
 
 // Local private variables.
 let childProcess;
+let stdout;
 
 class AudioRecorder extends require(`events`).EventEmitter {
 	/**
@@ -137,6 +138,8 @@ class AudioRecorder extends require(`events`).EventEmitter {
 		// Create new child process and give the recording commands.
 		childProcess = processSpawn(this.options.program, this.command.arguments, this.command.options);
 		
+		stdout = childProcess.stdout;
+
 		// Store this in `self` so it can be accessed in the callback.
 		let self = this;
 		childProcess.on(`close`, function(exitCode) {
@@ -186,8 +189,7 @@ class AudioRecorder extends require(`events`).EventEmitter {
 		}
 
 		const self = this;
-		const stdout = childProcess.stdout;
-
+		
 		//emits when the data comes to the process
 		stdout.on('data', function(data) {
 			self.emit('data', data);
