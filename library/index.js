@@ -191,13 +191,13 @@ class AudioRecorder extends require(`events`).EventEmitter {
 		const self = this;
 		
 		//emits when the data comes to the process
-		stdout.on('data', function(data) {
-			self.emit('data', data);
+		stdout.on(`data`, function(data) {
+			self.emit(`data`, data);
 		});
 
 		//emits when the process ends
-		stdout.on('end', function() {
-			self.emit('end');
+		stdout.on(`end`, function() {
+			self.emit(`end`);
 		});
 
 		return stdout;
