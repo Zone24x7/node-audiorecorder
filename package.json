@@ -1,10 +1,10 @@
 {
   "author": {
-    "name": "Ron Dekker",
-    "url": "https://rondekker.nl"
+    "name": "Zone24x7",
+    "url": "https://github.com/Zone24x7/"
   },
   "name": "node-audiorecorder",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Record audio via node using a SOX.",
   "license": "MIT",
   "keywords": [
@@ -16,13 +16,13 @@
     "wav",
     "wave"
   ],
-  "homepage": "https://github.com/RedKenrok/node-audiorecorder#readme",
+  "homepage": "https://github.com/Zone24x7/node-audiorecorder#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RedKenrok/node-audiorecorder.git"
+    "url": "git+https://github.com/Zone24x7/node-audiorecorder.git"
   },
   "bugs": {
-    "url": "https://github.com/RedKenrok/node-audiorecorder/issues"
+    "url": "https://github.com/Zone24x7/node-audiorecorder/issues"
   },
   "main": "library/index.js",
   "files": [
